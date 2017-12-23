@@ -1,0 +1,24 @@
+.nt-section-features{
+
+  padding: 30rem 0 30rem 0;
+  margin-top: -10rem;
+  background-image: linear-gradient(to right bottom,
+          $light_green_opacity,
+          $dark_green_opacity),
+  url(../assets/img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  &__first-pair, &__second-pair{
+    width: 50%;
+  }
+  &__card-container{
+    min-height: 280px;
+    width: 50%;
+  }
+}
