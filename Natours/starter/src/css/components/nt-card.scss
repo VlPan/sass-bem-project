@@ -23,13 +23,11 @@
   }
 
   &__title{
-    font-weight: 700;
-    font-size: $medium-font;
-    text-transform: uppercase;
+    @include heading3-title;
   }
 
   &__body{
-    font-size: $medium-font;
+    @include heading3-body;
   }
 
 

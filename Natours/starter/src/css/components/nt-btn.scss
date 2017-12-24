@@ -47,12 +47,21 @@
   }
 
   &--white{
-    background-color: white;
+    background-color: $color-white;
     color: $font-color;
+  }
+
+  &--green{
+    background-color: $light_green;
+    color: $color-white !important;
   }
 
   &--white::after{
     background-color: white;
+  }
+
+  &--green::after{
+    background-color: $light_green;
   }
 
   &--medium-padding{

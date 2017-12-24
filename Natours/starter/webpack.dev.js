@@ -9,7 +9,7 @@ module.exports = merge(commonConfig, {
         contentBase: path.join(__dirname, "dist"),
         historyApiFallback: true,
         compress: true,
-        port: 3000,
+        port: 3200,
         hot: true
     },
     plugins: [

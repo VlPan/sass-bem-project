@@ -19,3 +19,13 @@
 @mixin flexbox(){
   display: flex;
 }
+
+@mixin heading3-title(){
+  font-weight: 700;
+  font-size: $medium-font;
+  text-transform: uppercase;
+}
+
+@mixin heading3-body(){
+  font-size: $medium-font;
+}

@@ -96,6 +96,23 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(mp4|webm)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/img/[name].[ext]'
+                        }
+                    }
+                    // {
+                    //     loader: 'url-loader',
+                    //     options: {
+                    //         limit: 8192
+                    //     }
+                    // }
+                ]
+            },
+            {
                 test: /\.(html)$/,
                 use: {
                     loader: 'html-loader',

@@ -38,12 +38,18 @@
         color: $color-white;
       }
       &-2{
-
+        background-image: linear-gradient(to right bottom, $light-green, $dark-green);
+        color: $color-white;
       }
       &-3{
-
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        color: $color-white;
       }
     }
+
+    // BACK SIDE STYLING
+
+
 
     // FRONT SIDE STYLING
 
@@ -148,5 +154,20 @@
   &__list-item:last-child{
     border-bottom: none;
   }
+
+  &__title-price{
+    margin-top: 25%;
+    text-transform: uppercase;
+    font-size: $medium-font;
+  }
+
+  &__price{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: $big-font-2;
+    margin-bottom: 35%;
+    font-weight: 300;
+  }
+
 
 }
