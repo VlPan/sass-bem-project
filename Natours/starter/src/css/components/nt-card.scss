@@ -1,0 +1,36 @@
+.nt-card{
+  padding: 2em;
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  background: rgba($color-white, .8);
+  transition: all .2s;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  cursor: pointer;
+
+  &:hover{
+    transform: translateY(-5px);
+  }
+
+
+  &__icon{
+    font-size: $icon-font;
+    background-image: linear-gradient(to right, $light_green, $dark_green);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: $medium-font;
+    text-transform: uppercase;
+  }
+
+  &__body{
+    font-size: $medium-font;
+  }
+
+
+}

@@ -1,0 +1,60 @@
+.nt-header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+          $light_green_opacity,
+          $dark_green_opacity),
+  url(../assets/img/hero.jpg);
+
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+
+  &__logo{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    animation: fadeIn .8s linear;
+    backface-visibility: hidden;
+  }
+  &__content{
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__heading-primary{
+    color: white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+
+    &-main{
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+      -webkit-animation: moveInLeft .8s ease-out;
+      -o-animation: moveInLeft .8s ease-out;
+      animation: moveInLeft .8s ease-out;
+    }
+
+    &-sub{
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.75rem;
+      -webkit-animation: moveInRight .8s ease-out;
+      -o-animation: moveInRight .8s ease-out;
+      animation: moveInRight .8s ease-out;
+    }
+  }
+
+  &__btn{
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
