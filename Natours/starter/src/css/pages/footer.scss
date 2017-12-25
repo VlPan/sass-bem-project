@@ -1,0 +1,81 @@
+.nt-footer{
+  min-height: 50rem;
+  text-align: center;
+  color: $color-white;
+  background-color: $footer-color;
+  padding: 0 15rem;
+  &__logo-container{
+    color: $dark_green;
+    margin: 7rem auto;
+    text-align: center;
+    //border: 1px solid red;
+    display: inline-block;
+    animation: fadeIn .8s linear;
+    backface-visibility: hidden;
+  }
+
+  &__nav{
+    margin-bottom: 4rem;
+  }
+  &__list{
+    padding-top: 1rem;
+    border-top: 2px solid $font-color;
+  }
+  &__list-item{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    list-style: none;
+    display: inline-block;
+    transition: all .3s;
+    //backface-visibility: hidden;
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+    &:hover{
+      color: $dark_green;
+      transform: skew(-12deg);
+    }
+
+  }
+  &__link{
+    &:link,
+    &:visited{
+      @include resetLink($color-white);
+      transition: all .3s;
+      padding: .5rem 1rem;
+    }
+    &:hover,
+    &:active{
+      color: $dark_green;
+      box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    }
+  }
+
+  &__text-box{
+    padding-top: 1rem;
+    border-top: 2px solid $font-color;
+    width: 40%;
+    margin-left: auto;
+    text-align: left;
+    font-size: 1.4rem;
+  }
+
+  &__link-in-text-box{
+    &:link,
+    &:visited{
+      @include resetLink($color-white);
+      transition: all .3s;
+      padding: 0 1rem;
+      display: inline-block;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+    &:hover,
+    &:active{
+      color: $dark_green;
+      box-shadow: 0 1rem 2rem rgba($color-black, .4);
+      transform: rotate(5deg) scale(1.1);
+    }
+  }
+
+}

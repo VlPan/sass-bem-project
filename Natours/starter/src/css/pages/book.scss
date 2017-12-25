@@ -1,0 +1,22 @@
+.nt__section-book{
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $light_green, $dark_green)
+}
+
+.nt__book{
+  background-image: linear-gradient(105deg,
+          rgba($color-white, .9) 0%,
+          rgba($color-white, .9) 50%,
+          transparent 50%),
+  url(../assets/img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .25);
+}
+
+.nt__form-container{
+  width: 50%;
+  padding: 6rem;
+}
+

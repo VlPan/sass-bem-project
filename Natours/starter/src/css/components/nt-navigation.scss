@@ -1,0 +1,149 @@
+.nt-navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    visibility: visible;
+    animation: moveInBottom .8s;
+  }
+
+  &__checkbox:checked ~ &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked ~ &__button &__icon::before {
+    top:0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked ~ &__button &__icon::after {
+    top:0;
+    transform: rotate(-135deg);
+  }
+
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    cursor: pointer;
+    top: 6rem;
+    right: 6rem;
+    box-shadow: .2rem 2rem 4rem rgba($color-black, .2);
+    z-index: 2000;
+    text-align: center;
+  }
+
+  &__button:hover &__icon:after, &__button:hover &__icon:before {
+    top: 1rem;
+  }
+  &__button:hover &__icon:before {
+    top: -1rem;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($light_green, $dark_green);
+    z-index: 1000;
+    transition: all .8s cubic-bezier(.88, .22, .32, .66);
+
+    //transform: scale(80);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s cubic-bezier(.88, .22, .32, .66);
+
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(120deg,
+              transparent 0%,
+              transparent 50%,
+              $color-white 50%
+      );
+      background-size: 260%;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $dark_green;
+      transform: translateX(1rem);
+    }
+
+  }
+
+  &__icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $footer-color;
+      display: inline-block;
+      transition: all .2s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+    &::after {
+      top: .8rem;
+    }
+  }
+
+}
